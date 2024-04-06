@@ -20,6 +20,26 @@ if(right != 0 or left != 0){
 	moveY = lengthdir_y(spd, dir);
 }
 
-//---------APPLY MOVEMENT
+// Check horizontal collisions
+if (place_meeting(x + moveX, y, obj_wall)) {
+    // Resolve the collision horizontally by finding the nearest non-colliding x position
+    while (!place_meeting(x + sign(moveX), y, obj_wall)) {
+        x += sign(moveX);
+    }
+    moveX = 0;
+}
+
+// Move horizontally
 x += moveX;
+
+// Check vertical collisions
+if (place_meeting(x, y + moveY, obj_wall)) {
+    // Resolve the collision vertically by finding the nearest non-colliding y position
+    while (!place_meeting(x, y + sign(moveY), obj_wall)) {
+        y += sign(moveY);
+    }
+    moveY = 0;
+}
+
+// Move vertically
 y += moveY;

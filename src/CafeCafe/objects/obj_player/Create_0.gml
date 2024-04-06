@@ -1,4 +1,4 @@
-global.myVariable = "Hello, world!";
+global.myVariable = "Hellow world";
 
 spd = 2;
 

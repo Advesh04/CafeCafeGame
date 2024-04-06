@@ -3,9 +3,8 @@ draw_set_font(fnt_debug);
 var i = 0;
 draw_text(10, 10+(i*30), "CONTROLS"); i++;
 draw_text(10, 10+(i*30), "Move: Arrow keys"); i++;
-draw_text(10, 10+(i*30), "Text Event: Space"); i++;
 draw_text(10, 10+(i*30), "Interact: E"); i++;
-draw_text(10, 10+(i*30), "Debug: D"); i++;
+
 
 
 if(debug){

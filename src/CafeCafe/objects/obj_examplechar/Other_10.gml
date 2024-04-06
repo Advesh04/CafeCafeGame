@@ -21,7 +21,7 @@ switch(choice_variable){
 		myText[i]		= ["An emote", "Another you!"];
 		myTypes[i]		= 1;
 		mySpeaker[i]	= obj_player;
-	    myScripts[i]    = [[change_variable, "global", "myVariable", "bye world"], [create_instance_layer, 170, 120, "Instances", obj_examplechar]];
+	    myScripts[i]    = [[change_variable, "global", "myVariable", "bye World"], [create_instance_layer, 170, 120, "Instances", obj_examplechar]];
 		myNextLine[i]	= [0,0];
 		
 		//Line 3
@@ -67,7 +67,6 @@ switch(choice_variable){
 		myEmote[i]		= 0;
 		myNextLine[i]	= -1;
 		mySpeaker[i]	= id;
-		global.myVariable = "bye"
 
 
 		//Line 9

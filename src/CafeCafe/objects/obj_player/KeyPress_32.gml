@@ -1,4 +1,4 @@
-if(global.myVariable = "bye world"){
+if(global.myVariable == "bye World"){
 	create_dialogue("Just a little monologue.", -1);
 }
 
