@@ -21,7 +21,7 @@ switch(choice_variable){
 		myText[i]		= ["An emote", "Another you!"];
 		myTypes[i]		= 1;
 		mySpeaker[i]	= obj_player;
-	    myScripts[i]    = [[change_variable, "global", "myVariable", "bye world"], [create_instance_layer, 170, 120, "Instances", obj_examplechar]];
+		myScripts[i]	= [[create_instance_layer, 170,120,"Instances",obj_emote], [create_instance_layer, 170,120,"Instances",obj_examplechar]];
 		myNextLine[i]	= [0,0];
 		
 		//Line 3
@@ -58,6 +58,7 @@ switch(choice_variable){
 		myText[i]		= ["(sarcastically) Blue is the best colour.", "Green is the best colour."];
 		myTypes[i]		= 1;
 		myNextLine[i]	= [8,9];
+		myScripts[i]	= [[change_variable, id, "choice_variable", "blue"], [change_variable, id, "choice_variable", "green"]];
 		mySpeaker[i]	= obj_player;
 
 		//Line 8
@@ -67,8 +68,6 @@ switch(choice_variable){
 		myEmote[i]		= 0;
 		myNextLine[i]	= -1;
 		mySpeaker[i]	= id;
-		global.myVariable = "bye"
-
 
 		//Line 9
 		i++;
@@ -80,9 +79,6 @@ switch(choice_variable){
 		#endregion
 	break;
 	
-
-	
-	
 	case "green":
 	#region If you chose green
 		var i = 0;
@@ -93,6 +89,7 @@ switch(choice_variable){
 		myEmote[i]		= 9;
 		mySpeaker[i]	= id;
 		myTextCol[i]	= [26,c_lime, 31,c_white];
+		
 		//uncommenting this will make the first conversation begin again
 		//choice_variable	= -1;
 	#endregion
@@ -114,6 +111,4 @@ switch(choice_variable){
 		//choice_variable	= -1;
 	#endregion
 	break;
-	
-	
 }
